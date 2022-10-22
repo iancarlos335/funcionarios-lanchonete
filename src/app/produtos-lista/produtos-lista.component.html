@@ -1,0 +1,25 @@
+<header>
+    <h2>Lista de Produtos</h2>
+    <button class="btn btn-primary">
+        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+    </button>
+</header>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.nomeProduto}}</td>
+            <td>{{p.quantidade}}</td>
+            <td>{{p.valor}}</td>
+            <td>{{p.tipo}}</td>
+        </tr>
+    </tbody>
+</table>
