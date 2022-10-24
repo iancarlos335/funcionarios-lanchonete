@@ -1,5 +1,5 @@
 <header>
-    <h2>Lista de Produtos</h2>
+    <h2>Lista de Bebidas</h2>
     <button class="btn btn-primary">
         <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
     </button>
@@ -11,15 +11,61 @@
             <th>Produto</th>
             <th>Quantidade</th>
             <th>Valor</th>
-            <th>Tipo</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of produtos">
-            <td>{{p.nomeProduto}}</td>
-            <td>{{p.quantidade}}</td>
-            <td>{{p.valor}}</td>
-            <td>{{p.tipo}}</td>
+        <tr *ngFor="let b of bebidas">
+            <td>{{b.nomeBebida}}</td>
+            <td>{{b.quantidade
+            <td>{{b.valor}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<header>
+    <h2>Lista de Doces</h2>
+    <button class="btn btn-primary">
+        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+    </button>
+</header>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of doces">
+            <td>{{d.nomeBebida}}</td>
+            <td>{{d.quantidade
+            <td>{{d.valor}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<header>
+    <h2>Lista de Salgados</h2>
+    <button class="btn btn-primary">
+        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+    </button>
+</header>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of salgados">
+            <td>{{s.nomeBebida}}</td>
+            <td>{{s.quantidade
+            <td>{{s.valor}}</td>
         </tr>
     </tbody>
 </table>

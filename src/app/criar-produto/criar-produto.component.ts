@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../produto';
+import { Bebida } from '../bebida';
 
 @Component({
   selector: 'app-criar-produto',
@@ -8,14 +8,14 @@ import { Produto } from '../produto';
 })
 export class CriarProdutoComponent implements OnInit {
 
-  produto: Produto = new Produto();
+  bebida: Bebida = new Bebida();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    console.log(this.produto)
+    console.log(this.bebida)
   }
 
 }
