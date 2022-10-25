@@ -1,0 +1,17 @@
+<div class="col-md-6 offset-md-3">
+    <h2>Adicionar Produto</h2>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Nome do Produto</label>
+            <input type="text" class="form-control" id="nomeProduto"
+                [(ngModel)] = "doce.nomeDoce" name="nomeProduto">
+        </div>
+        <div class="form-group">
+            <label>Valor</label>
+            <input type="text" class="form-control" id="valor"
+                [(ngModel)] = "doce.valor" name="valo">
+        </div>
+        <button type="submit" class="btn btn-success">Adicionar</button>
+    </form>
+    </div>

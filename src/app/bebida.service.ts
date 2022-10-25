@@ -15,4 +15,8 @@ export class BebidaService {
   listar(): Observable<Bebida[]>{
     return this.http.get<Bebida[]>(`${this.bebidasURL}`);
   }
+
+  criar(bebida:Bebida){
+    this.http.post(`${this.bebidasURL}`, bebida);
+  }
 }

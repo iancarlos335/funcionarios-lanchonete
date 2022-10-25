@@ -1,7 +1,7 @@
 <header>
     <h2>Lista de Bebidas</h2>
     <button class="btn btn-primary">
-        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+        <a routerLink="/produtos/bebida" routerLinkActive="active" class="nav-link">Adicionar</a>
     </button>
 </header>
 
@@ -9,14 +9,12 @@
     <thead>
         <tr>
             <th>Produto</th>
-            <th>Quantidade</th>
             <th>Valor</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let b of bebidas">
             <td>{{b.nomeBebida}}</td>
-            <td>{{b.quantidade
             <td>{{b.valor}}</td>
         </tr>
     </tbody>
@@ -25,7 +23,7 @@
 <header>
     <h2>Lista de Doces</h2>
     <button class="btn btn-primary">
-        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+        <a routerLink="/produtos/doce" routerLinkActive="active" class="nav-link">Adicionar</a>
     </button>
 </header>
 
@@ -33,14 +31,12 @@
     <thead>
         <tr>
             <th>Produto</th>
-            <th>Quantidade</th>
             <th>Valor</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let d of doces">
-            <td>{{d.nomeBebida}}</td>
-            <td>{{d.quantidade
+            <td>{{d.nomeDoce}}</td>
             <td>{{d.valor}}</td>
         </tr>
     </tbody>
@@ -49,7 +45,7 @@
 <header>
     <h2>Lista de Salgados</h2>
     <button class="btn btn-primary">
-        <a routerLink="/produtos/adicionar" routerLinkActive="active" class="nav-link">Adicionar</a>
+        <a routerLink="/produtos/salgado" routerLinkActive="active" class="nav-link">Adicionar</a>
     </button>
 </header>
 
@@ -57,14 +53,12 @@
     <thead>
         <tr>
             <th>Produto</th>
-            <th>Quantidade</th>
             <th>Valor</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let s of salgados">
-            <td>{{s.nomeBebida}}</td>
-            <td>{{s.quantidade
+            <td>{{s.nomeSalgado}}</td>
             <td>{{s.valor}}</td>
         </tr>
     </tbody>
