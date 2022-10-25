@@ -1,0 +1,22 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Funcionario } from './funcionario';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FuncionarioService {
+
+  funcionariosURL="http://localhost:8080/funcionarios";
+
+  constructor(private http:HttpClient) { }
+
+  listar(): Observable<Funcionario[]>{
+    return this.http.get<Funcionario[]>(`${this.funcionariosURL}`);
+  }
+
+  criar(funcionario:Funcionario):Observable<Object>{
+    return this.http.post(`${this.funcionariosURL}`, funcionario);
+  }
+}

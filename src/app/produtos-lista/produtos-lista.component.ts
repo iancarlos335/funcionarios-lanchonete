@@ -21,7 +21,8 @@ export class ProdutosListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBebidas();
-    this.getDoces
+    this.getDoces();
+    this.getSalgados();
   }
 
   private getBebidas(){

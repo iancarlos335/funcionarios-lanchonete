@@ -5,12 +5,12 @@
         <div class="form-group">
             <label>Nome do Produto</label>
             <input type="text" class="form-control" id="nomeProduto"
-                [(ngModel)] = "salgado.nomeSalgado" name="nomeProduto">
+                [(ngModel)] = "salgado.nomeSalgado" name="nomeProduto" required>
         </div>
         <div class="form-group">
             <label>Valor</label>
             <input type="text" class="form-control" id="valor"
-                [(ngModel)] = "salgado.valor" name="valo">
+                [(ngModel)] = "salgado.valor" name="valo" required>
         </div>
         <button type="submit" class="btn btn-success">Adicionar</button>
     </form>

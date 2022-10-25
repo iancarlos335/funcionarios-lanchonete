@@ -16,7 +16,7 @@ export class BebidaService {
     return this.http.get<Bebida[]>(`${this.bebidasURL}`);
   }
 
-  criar(bebida:Bebida){
-    this.http.post(`${this.bebidasURL}`, bebida);
+  criar(bebida:Bebida):Observable<Object>{
+    return this.http.post(`${this.bebidasURL}`, bebida);
   }
 }

@@ -3,3 +3,20 @@ header{
     justify-content: space-between;
     margin: 10px;
 }
+
+main{
+    position: fixed;
+    overflow-y: scroll;
+    height: calc(100% - 120px);
+    width: 88%;
+    right: 6%;
+    left: 6%;
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}
+
+td{
+    width: 50%;
+}

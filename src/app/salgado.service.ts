@@ -15,4 +15,8 @@ export class SalgadoService {
   listar(): Observable<Salgado[]>{
     return this.http.get<Salgado[]>(`${this.salgadosURL}`);
   }
+
+  criar(salgado: Salgado):Observable<Object>{
+    return this.http.post(`${this.salgadosURL}`, salgado);
+  }
 }

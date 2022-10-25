@@ -1,0 +1,18 @@
+<header>
+    <h2>Lista de Funcionários</h2>
+    <button class="btn btn-primary">
+        <a routerLink="/adicionarFuncionario" routerLinkActive="active" class="nav-link">Adicionar</a>
+    </button>
+</header>
+
+<div>
+
+    <div class="card" style="width: 18rem;" *ngFor="let f of funcionarios">
+        <img src="/angular-api/src/assets/images/person_110935.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{f.nomeFuncionario}}</h5>
+          <a href="#" class="btn btn-primary">Editar</a>
+        </div>
+      </div>
+
+</div>

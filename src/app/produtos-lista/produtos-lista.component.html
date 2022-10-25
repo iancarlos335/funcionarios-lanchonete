@@ -1,7 +1,10 @@
-<header>
-    <h2>Lista de Bebidas</h2>
+<main>
+
+    <div>
+        <header>
+            <h2>Lista de Bebidas</h2>
     <button class="btn btn-primary">
-        <a routerLink="/produtos/bebida" routerLinkActive="active" class="nav-link">Adicionar</a>
+        <a routerLink="/bebida" routerLinkActive="active" class="nav-link">Adicionar</a>
     </button>
 </header>
 
@@ -19,47 +22,55 @@
         </tr>
     </tbody>
 </table>
+</div>
+<div>
+    
+    <header>
+        <h2>Lista de Doces</h2>
+        <button class="btn btn-primary">
+            <a routerLink="/doce" routerLinkActive="active" class="nav-link">Adicionar</a>
+        </button>
+    </header>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of doces">
+                <td>{{d.nomeDoce}}</td>
+                <td>{{d.valor}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<header>
-    <h2>Lista de Doces</h2>
-    <button class="btn btn-primary">
-        <a routerLink="/produtos/doce" routerLinkActive="active" class="nav-link">Adicionar</a>
-    </button>
-</header>
+<div>
+    
+    <header>
+        <h2>Lista de Salgados</h2>
+        <button class="btn btn-primary">
+            <a routerLink="/salgado" routerLinkActive="active" class="nav-link">Adicionar</a>
+        </button>
+    </header>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of salgados">
+                <td>{{s.nomeSalgado}}</td>
+                <td>{{s.valor}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Produto</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let d of doces">
-            <td>{{d.nomeDoce}}</td>
-            <td>{{d.valor}}</td>
-        </tr>
-    </tbody>
-</table>
-
-<header>
-    <h2>Lista de Salgados</h2>
-    <button class="btn btn-primary">
-        <a routerLink="/produtos/salgado" routerLinkActive="active" class="nav-link">Adicionar</a>
-    </button>
-</header>
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Produto</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let s of salgados">
-            <td>{{s.nomeSalgado}}</td>
-            <td>{{s.valor}}</td>
-        </tr>
-    </tbody>
-</table>
+</main>

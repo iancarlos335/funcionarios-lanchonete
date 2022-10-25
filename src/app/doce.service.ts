@@ -15,4 +15,8 @@ export class DoceService {
   listar(): Observable<Doce[]>{
     return this.http.get<Doce[]>(`${this.docesURL}`);
   }
+
+  criar(doce:Doce):Observable<Object>{
+    return this.http.post(`${this.docesURL}`, doce);
+  }
 }

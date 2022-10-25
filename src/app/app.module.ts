@@ -12,6 +12,9 @@ import { SalgadoService } from './salgado.service';
 import { BebidaComponent } from './criar/bebida/bebida.component';
 import { DoceComponent } from './criar/doce/doce.component';
 import { SalgadoComponent } from './criar/salgado/salgado.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { FuncionariosComponent } from './funcionarios/funcionarios.component';
+import { FuncionarioComponent } from './criar/funcionario/funcionario.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { SalgadoComponent } from './criar/salgado/salgado.component';
     BebidaComponent,
     DoceComponent,
     SalgadoComponent,
+    PedidosComponent,
+    FuncionariosComponent,
+    FuncionarioComponent,
     
   ],
   imports: [
