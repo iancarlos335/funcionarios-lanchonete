@@ -3,3 +3,26 @@ header{
     justify-content: space-between;
     margin: 10px;
 }
+
+main{
+    position: fixed;
+    right: 10%;
+    left: 10%;
+}
+
+.cards{
+    display: flex;
+    position: fixed;
+    right: 10%;
+    left: 10%;
+    width: 80%;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
+    height: calc(100% - 200px);
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
+}
