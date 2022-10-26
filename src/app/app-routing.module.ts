@@ -8,10 +8,12 @@ import { EntradaComponent } from './entrada/entrada.component';
 import { FuncionariosComponent } from './funcionarios/funcionarios.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
+import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.component';
 
 const routes: Routes = [
   {path:"produtos", component: ProdutosListaComponent},
   {path:"bebida", component: BebidaComponent},
+  {path:"bebidaUpdate/:id", component: BebidaUpdateComponent},
   {path:"doce", component: DoceComponent},
   {path:"salgado", component: SalgadoComponent},
   {path:"home", component: EntradaComponent},

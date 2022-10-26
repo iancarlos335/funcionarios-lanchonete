@@ -19,4 +19,12 @@ export class BebidaService {
   criar(bebida:Bebida):Observable<Object>{
     return this.http.post(`${this.bebidasURL}`, bebida);
   }
+
+  getById(id:number): Observable<Bebida>{
+    return this.http.get<Bebida>(`${this.bebidasURL}/${id}`)
+  }
+
+  atualizarBebida(id:number, bebida: Bebida): Observable<Object>{
+    return this.http.put(`${this.bebidasURL}/${id}`,bebida)
+  }
 }

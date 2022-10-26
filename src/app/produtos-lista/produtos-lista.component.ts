@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Bebida } from '../bebida';
 import { BebidaService } from '../bebida.service';
 import { Doce } from '../doce';
@@ -17,7 +18,7 @@ export class ProdutosListaComponent implements OnInit {
   doces: Doce[];
   salgados: Salgado[];
 
-  constructor(private bebidaService:BebidaService, private doceService:DoceService, private salgadoService:SalgadoService) { }
+  constructor(private bebidaService:BebidaService, private doceService:DoceService, private salgadoService:SalgadoService, private router:Router) { }
 
   ngOnInit(): void {
     this.getBebidas();
@@ -27,6 +28,10 @@ export class ProdutosListaComponent implements OnInit {
 
   private getBebidas(){
     this.bebidaService.listar().subscribe(data =>{this.bebidas=data})
+  }
+
+  updateBebida(id:number){
+    this.router.navigate(["bebidaUpdate",id])
   }
 
   private getDoces(){

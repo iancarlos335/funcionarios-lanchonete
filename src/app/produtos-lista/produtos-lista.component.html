@@ -13,12 +13,18 @@
         <tr>
             <th>Produto</th>
             <th>Valor</th>
+            <th>Descricao</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let b of bebidas">
             <td>{{b.nomeBebida}}</td>
             <td>{{b.valor}}</td>
+            <td></td>
+            <td>
+                <button (click)="updateBebida(b.id)" class="btn btn-info">Atualizar</button>
+            </td>
         </tr>
     </tbody>
 </table>
