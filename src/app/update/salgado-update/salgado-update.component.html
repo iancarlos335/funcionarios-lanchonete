@@ -1,23 +1,22 @@
 <div class="col-md-6 offset-md-3">
-    <h2>Adicionar Bebida</h2>
+    <h2>Atualizar Salgado</h2>
     <form (ngSubmit) = "onSubmit()">
     
         <div class="form-group">
             <label>Nome do Produto</label>
             <input type="text" class="form-control" id="nomeProduto"
-                [(ngModel)] = "bebida.nomeBebida" name="nomeProduto" required>
+                [(ngModel)] = "salgado.nomeSalgado" name="nomeProduto" required>
         </div>
         <div class="form-group">
             <label>Valor</label>
             <input type="text" class="form-control" id="valor"
-                [(ngModel)] = "bebida.valor" name="valo" required>
+                [(ngModel)] = "salgado.valor" name="valo" required>
         </div>
         <div class="form-group">
             <label>Descricão</label>
             <textarea type="text" class="form-control" id="descricao"
-                [(ngModel)] = "bebida.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
+                [(ngModel)] = "salgado.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
         </div>
-            <h3>ERRO</h3>
-            <button type="submit" class="btn btn-success">Adicionar</button>
+            <button type="submit" class="btn btn-success">Atualizar</button>
     </form>
     </div>

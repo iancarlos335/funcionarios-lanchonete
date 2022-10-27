@@ -16,6 +16,8 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { FuncionariosComponent } from './funcionarios/funcionarios.component';
 import { FuncionarioComponent } from './criar/funcionario/funcionario.component';
 import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.component';
+import { DoceUpdateComponent } from './update/doce-update/doce-update.component';
+import { SalgadoUpdateComponent } from './update/salgado-update/salgado-update.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.comp
     FuncionariosComponent,
     FuncionarioComponent,
     BebidaUpdateComponent,
+    DoceUpdateComponent,
+    SalgadoUpdateComponent,
     
   ],
   imports: [

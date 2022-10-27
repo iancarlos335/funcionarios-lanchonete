@@ -19,4 +19,12 @@ export class SalgadoService {
   criar(salgado: Salgado):Observable<Object>{
     return this.http.post(`${this.salgadosURL}`, salgado);
   }
+
+  getById(id:number): Observable<Salgado>{
+    return this.http.get<Salgado>(`${this.salgadosURL}/${id}`)
+  }
+
+  atualizarSalgado(id:number, salgado: Salgado): Observable<Object>{
+    return this.http.put(`${this.salgadosURL}/${id}`,salgado)
+  }
 }

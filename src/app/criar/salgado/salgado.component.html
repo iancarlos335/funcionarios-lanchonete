@@ -12,6 +12,11 @@
             <input type="text" class="form-control" id="valor"
                 [(ngModel)] = "salgado.valor" name="valo" required>
         </div>
+        <div class="form-group">
+            <label>Descricão</label>
+            <textarea type="text" class="form-control" id="descricao"
+                [(ngModel)] = "salgado.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
+        </div>
         <button type="submit" class="btn btn-success">Adicionar</button>
     </form>
 </div>

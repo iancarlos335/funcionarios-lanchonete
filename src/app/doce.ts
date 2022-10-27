@@ -1,6 +1,6 @@
 export class Doce {
     id:number;
     nomeDoce:string;
-    quantidade:number;
+    descricao:string;
     valor:number;
 }

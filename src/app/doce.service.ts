@@ -19,4 +19,12 @@ export class DoceService {
   criar(doce:Doce):Observable<Object>{
     return this.http.post(`${this.docesURL}`, doce);
   }
+
+  getById(id:number): Observable<Doce>{
+    return this.http.get<Doce>(`${this.docesURL}/${id}`)
+  }
+
+  atualizarDoce(id:number, doce: Doce): Observable<Object>{
+    return this.http.put(`${this.docesURL}/${id}`,doce)
+  }
 }

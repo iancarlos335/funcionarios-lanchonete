@@ -38,8 +38,16 @@ export class ProdutosListaComponent implements OnInit {
     this.doceService.listar().subscribe(data =>{this.doces=data})
   }
 
+  updateDoce(id:number){
+    this.router.navigate(["doceUpdate",id])
+  }
+
   private getSalgados(){
     this.salgadoService.listar().subscribe(data=>{this.salgados=data})
+  }
+
+  updateSalgado(id:number){
+    this.router.navigate(["salgadoUpdate",id])
   }
 
 }
