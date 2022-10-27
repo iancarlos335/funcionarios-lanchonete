@@ -27,4 +27,8 @@ export class SalgadoService {
   atualizarSalgado(id:number, salgado: Salgado): Observable<Object>{
     return this.http.put(`${this.salgadosURL}/${id}`,salgado)
   }
+
+  deletarSalgado(id:number):Observable<Object>{
+    return this.http.delete(`${this.salgadosURL}/${id}`)
+  }
 }

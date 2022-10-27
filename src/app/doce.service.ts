@@ -27,4 +27,8 @@ export class DoceService {
   atualizarDoce(id:number, doce: Doce): Observable<Object>{
     return this.http.put(`${this.docesURL}/${id}`,doce)
   }
+
+  deletarDoce(id:number):Observable<Object>{
+    return this.http.delete(`${this.docesURL}/${id}`)
+  }
 }

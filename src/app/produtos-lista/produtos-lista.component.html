@@ -21,9 +21,10 @@
         <tr *ngFor="let b of bebidas">
             <td style="width: 15%;">{{b.nomeBebida}}</td>
             <td style="width: 15%;">{{b.valor}}</td>
-            <td style="width: 50%;">{{b.descricao}}</td>
-            <td style="width: 20%;">
+            <td style="width: 55%;">{{b.descricao}}</td>
+            <td style="width: 15%;">
                 <button (click)="updateBebida(b.id)" class="btn btn-info">Atualizar</button>
+                <button (click)="deleteBebida(b.id)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
             </td>
         </tr>
     </tbody>
@@ -51,9 +52,10 @@
             <tr *ngFor="let d of doces">
                 <td style="width: 15%;">{{d.nomeDoce}}</td>
                 <td style="width: 15%;">{{d.valor}}</td>
-                <td style="width: 50%;">{{d.descricao}}</td>
-                <td style="width: 20%;">
+                <td style="width: 55%;">{{d.descricao}}</td>
+                <td style="width: 15%;">
                     <button (click)="updateDoce(d.id)" class="btn btn-info">Atualizar</button>
+                    <button (click)="deleteDoce(d.id)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
                 </td>
             </tr>
         </tbody>
@@ -82,9 +84,10 @@
             <tr *ngFor="let s of salgados">
                 <td style="width: 15%;">{{s.nomeSalgado}}</td>
                 <td style="width: 15%;">{{s.valor}}</td>
-                <td style="width: 50%;">{{s.descricao}}</td>
-                <td style="width: 20%;">
+                <td style="width: 55%;">{{s.descricao}}</td>
+                <td style="width: 15%;">
                     <button (click)="updateSalgado(s.id)" class="btn btn-info">Atualizar</button>
+                    <button (click)="deleteSalgado(s.id)" class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
                 </td>
             </tr>
         </tbody>

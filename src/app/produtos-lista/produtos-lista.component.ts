@@ -34,12 +34,25 @@ export class ProdutosListaComponent implements OnInit {
     this.router.navigate(["bebidaUpdate",id])
   }
 
+  deleteBebida(id:number){
+    this.bebidaService.deletarBebida(id).subscribe(data => {
+      console.log(data);
+      location.reload();
+    })
+  }
+
   private getDoces(){
     this.doceService.listar().subscribe(data =>{this.doces=data})
   }
 
   updateDoce(id:number){
     this.router.navigate(["doceUpdate",id])
+  }
+  deleteDoce(id:number){
+    this.doceService.deletarDoce(id).subscribe(data => {
+      console.log(data);
+      this.refresh();
+    })
   }
 
   private getSalgados(){
@@ -49,5 +62,14 @@ export class ProdutosListaComponent implements OnInit {
   updateSalgado(id:number){
     this.router.navigate(["salgadoUpdate",id])
   }
+  deleteSalgado(id:number){
+    this.salgadoService.deletarSalgado(id).subscribe(data => {
+      console.log(data);
+      this.refresh();
+    })
+  }
 
+  refresh(): void {
+    window.location.reload();
+}
 }

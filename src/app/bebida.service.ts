@@ -27,4 +27,8 @@ export class BebidaService {
   atualizarBebida(id:number, bebida: Bebida): Observable<Object>{
     return this.http.put(`${this.bebidasURL}/${id}`,bebida)
   }
+
+  deletarBebida(id:number): Observable<Object>{
+    return this.http.delete(`${this.bebidasURL}/${id}`)
+  }
 }
