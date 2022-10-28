@@ -17,7 +17,9 @@
             <textarea type="text" class="form-control" id="descricao"
                 [(ngModel)] = "bebida.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
         </div>
-            <h3>ERRO</h3>
+        <div class="alert alert-danger d-none justify-content-between mt-3" role="alert" id="error">
+            ERRO AO CRIAR BEBIDA! <small>Dica: Utilize Ponto</small>
+        </div>
             <button type="submit" class="btn btn-success">Adicionar</button>
     </form>
     </div>

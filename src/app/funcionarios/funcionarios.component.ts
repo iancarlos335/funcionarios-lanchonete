@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Funcionario } from '../funcionario';
 import { FuncionarioService } from '../funcionario.service';
 
@@ -11,7 +12,7 @@ export class FuncionariosComponent implements OnInit {
 
   funcionarios:Funcionario[];
 
-  constructor(private funcionarioService: FuncionarioService) { }
+  constructor(private funcionarioService: FuncionarioService, private router:Router) { }
 
   ngOnInit(): void {
     this.getFuncionarios();
@@ -19,6 +20,13 @@ export class FuncionariosComponent implements OnInit {
 
   private getFuncionarios(){
     this.funcionarioService.listar().subscribe(data =>{this.funcionarios=data})
+  }
+
+  deleteFuncionario(id:number){
+    this.funcionarioService.deletar(id).subscribe(data => {
+      console.log(data);
+    });
+    window.location.reload();
   }
 
 

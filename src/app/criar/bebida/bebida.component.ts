@@ -18,9 +18,9 @@ export class BebidaComponent implements OnInit {
   }
 
   onSubmit(){
-    this.bebidaService.criar(this.bebida).subscribe(data => this.goToList() , error =>{
+    this.bebidaService.criar(this.bebida).subscribe(data =>this.goToList(), error =>{
       console.log(error)
-      document.getElementsByTagName("h3")[0].style.display="block";
+      document.getElementById("error").style.display = "flex"
     } )
   }
 

@@ -18,8 +18,7 @@ export class DoceComponent implements OnInit {
   }
 
   onSubmit(){
-    this.doceService.criar(this.doce).subscribe(data=>{console.log(data)}, error => console.log(error))
-    this.goToList();
+    this.doceService.criar(this.doce).subscribe(data=>this.goToList(), error => console.log(error))
   }
 
   goToList(){

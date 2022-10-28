@@ -18,8 +18,8 @@ export class SalgadoComponent implements OnInit {
   }
 
   onSubmit(){
-    this.salgadoService.criar(this.salgado).subscribe(data=>{console.log(data)}, error => console.log(error))
-    this.goToList();
+    this.salgadoService.criar(this.salgado).subscribe(data=>this.goToList(), error => console.log(error))
+
   }
 
   goToList(){

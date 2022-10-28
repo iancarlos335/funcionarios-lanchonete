@@ -19,4 +19,8 @@ export class FuncionarioService {
   criar(funcionario:Funcionario):Observable<Object>{
     return this.http.post(`${this.funcionariosURL}`, funcionario);
   }
+
+  deletar(id:number):Observable<Object>{
+    return this.http.delete(`${this.funcionariosURL}/${id}`)
+  }
 }
