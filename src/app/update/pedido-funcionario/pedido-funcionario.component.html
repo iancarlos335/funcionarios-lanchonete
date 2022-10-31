@@ -1,0 +1,17 @@
+<div class="col-md-6 offset-md-3">
+    <h2>Selecione o Funcionário</h2>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Nome do Funcionario</label>
+
+            <select name="select" [(ngModel)]="pedido.funcionario" class="form-control">
+                <option *ngFor="let f of funcionarios" value="{{f.nomeFuncionario}}">{{f.nomeFuncionario}}</option>
+            </select>
+        </div>
+        <div class="alert alert-danger justify-content-between mt-3" role="alert" id="error">
+            SELECIONE UM FUNCIONÁRIO
+        </div>
+            <button type="submit" class="btn btn-success">Atualizar</button>
+    </form>
+    </div>

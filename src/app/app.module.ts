@@ -18,6 +18,7 @@ import { FuncionarioComponent } from './criar/funcionario/funcionario.component'
 import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.component';
 import { DoceUpdateComponent } from './update/doce-update/doce-update.component';
 import { SalgadoUpdateComponent } from './update/salgado-update/salgado-update.component';
+import { PedidoFuncionarioComponent } from './update/pedido-funcionario/pedido-funcionario.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SalgadoUpdateComponent } from './update/salgado-update/salgado-update.c
     BebidaUpdateComponent,
     DoceUpdateComponent,
     SalgadoUpdateComponent,
+    PedidoFuncionarioComponent,
     
   ],
   imports: [

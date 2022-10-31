@@ -1,1 +1,31 @@
-<p>pedidos works!</p>
+<div>
+    <header>
+        <h2>Lista de Pedidos</h2>
+    </header>
+
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Bebidas</th>
+            <th>Doces</th>
+            <th>Salgados</th>
+            <th>Valor</th>
+            <th>Funcionario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of pedidos">
+            <td style="width: 10%;">{{p.id}}</td>
+            <td style="width: 20%;"><div><li *ngFor="let b of p.bebida">{{b}}</li></div></td>
+            <td style="width: 20%;"><ul><li *ngFor="let d of p.doce">{{d}}</li></ul></td>
+            <td style="width: 20%;"><ul><li *ngFor="let s of p.salgado">{{s}}</li></ul></td>
+            <td style="width: 10%;">{{p.valorTotal}}</td>
+            <td style="width: 15%;">{{p.funcionario}}</td>
+            <td style="width: 5%;">
+                <button class="btn btn-secondary" (click)="selectFuncionario(p.id)">FUNCIONÁRIO</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>

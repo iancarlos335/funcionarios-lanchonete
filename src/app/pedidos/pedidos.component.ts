@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Pedido } from '../pedido';
+import { PedidoService } from '../pedido.service';
 
 @Component({
   selector: 'app-pedidos',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  constructor() { }
+  pedidos:Pedido[];
+
+  constructor(private pedidoService:PedidoService, private router:Router) { }
 
   ngOnInit(): void {
+    this.getPedidos();
+  }
+
+  private getPedidos(){
+    this.pedidoService.listar().subscribe(data=> this.pedidos = data)
+  }
+
+  selectFuncionario(id:number){
+    this.router.navigate(["escolher-funcionario",id])
   }
 
 }

@@ -10,6 +10,7 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
 import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.component';
 import { DoceUpdateComponent } from './update/doce-update/doce-update.component';
+import { PedidoFuncionarioComponent } from './update/pedido-funcionario/pedido-funcionario.component';
 import { SalgadoUpdateComponent } from './update/salgado-update/salgado-update.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:"salgadoUpdate/:id", component: SalgadoUpdateComponent},
   {path:"home", component: EntradaComponent},
   {path:"pedidos", component: PedidosComponent},
+  {path:"escolher-funcionario/:id", component: PedidoFuncionarioComponent},
   {path:"funcionarios", component: FuncionariosComponent},
   {path:"adicionarFuncionario", component: FuncionarioComponent},
   {path:"", redirectTo:"home", pathMatch:"full"}
