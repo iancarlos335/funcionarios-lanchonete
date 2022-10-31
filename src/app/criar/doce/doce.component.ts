@@ -18,7 +18,10 @@ export class DoceComponent implements OnInit {
   }
 
   onSubmit(){
-    this.doceService.criar(this.doce).subscribe(data=>this.goToList(), error => console.log(error))
+    this.doceService.criar(this.doce).subscribe(data=>this.goToList(), error => {
+      console.log(error)
+      document.getElementById("error").style.display="flex";
+    })
   }
 
   goToList(){

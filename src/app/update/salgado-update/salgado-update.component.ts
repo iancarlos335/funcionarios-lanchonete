@@ -22,7 +22,9 @@ export class SalgadoUpdateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.salgadoService.atualizarSalgado(this.id,this.salgado).subscribe(data => this.goToList())
+    this.salgadoService.atualizarSalgado(this.id,this.salgado).subscribe(data => this.goToList(),error=>{
+      document.getElementById("error").style.display="flex";
+    })
   }
 
   goToList(){

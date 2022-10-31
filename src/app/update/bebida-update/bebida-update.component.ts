@@ -22,7 +22,9 @@ export class BebidaUpdateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.bebidaService.atualizarBebida(this.id, this.bebida).subscribe(data => this.goToList())
+    this.bebidaService.atualizarBebida(this.id, this.bebida).subscribe(data => this.goToList(),error=>{
+      document.getElementById("error").style.display="flex"
+    })
   }
 
   goToList(){
