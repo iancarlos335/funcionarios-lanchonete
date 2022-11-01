@@ -3,4 +3,5 @@ export class Doce {
     nomeDoce:string;
     descricao:string;
     valor:number;
+    imagem:string;
 }

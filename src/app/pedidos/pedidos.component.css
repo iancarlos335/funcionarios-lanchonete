@@ -3,3 +3,14 @@ header{
     justify-content: space-between;
     margin: 10px;
 }
+
+main{
+    position: fixed;
+    width: 88%;
+    right: 6%;
+    left: 6%;
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}

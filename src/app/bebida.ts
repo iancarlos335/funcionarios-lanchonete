@@ -3,4 +3,5 @@ export class Bebida {
         nomeBebida:string;
         descricao:string;
         valor:number;
+        imagem:string;
 }
