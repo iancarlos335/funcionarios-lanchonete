@@ -1,12 +1,28 @@
-<div class="col-md-6 offset-md-3">
+<div class="col-md-6 offset-md-3 all">
     <h2>Adicionar Funcionario</h2>
     <form (ngSubmit) = "onSubmit()">
     
         <div class="form-group">
             <label>Nome do Funcionario</label>
-            <input type="text" class="form-control" id="nomeProduto"
+            <input type="text" class="form-control" id="nomeFuncionario"
                 [(ngModel)] = "funcionario.nomeFuncionario" autocomplete="off" name="nomeFuncionario" required>
+        </div>
+        <div class="fomr-group">
+            <label>Escolha o Avatar</label>
+            <div id="imagens">
+                <div class="escolha">
+                    <img src="assets/img/avatar-man.png" alt="avatar homem">
+                    <input type="radio" value="assets/img/avatar-man.png" [(ngModel)] = "funcionario.imagem" name="imagem" required>
+                </div>
+                <div class="escolha">
+                    <img src="assets/img/avatar-woman.png" alt="avatar mulher">
+                    <input type="radio" value="assets/img/avatar-woman.png" [(ngModel)] = "funcionario.imagem" name="imagem" required>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger justify-content-between mt-3" role="alert" id="error">
+            ERRO AO CRIAR FUNCIONÁRIO! <small>Dica: Selecione o Avatar</small>
         </div>
         <button type="submit" class="btn btn-success">Adicionar</button>
     </form>
-    </div>
+</div>

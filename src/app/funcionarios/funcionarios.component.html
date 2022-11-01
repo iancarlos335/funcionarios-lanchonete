@@ -10,7 +10,7 @@
   <div class="cards">
     
     <div class="card" style="width: 18rem; height: 25rem;" *ngFor="let f of funcionarios">
-      <img src="/assets/img/person_110935.png" class="card-img-top">
+      <img src="{{f.imagem}}" class="card-img-top m-1">
       <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title">{{f.nomeFuncionario}}</h5>
         <button (click)="deleteFuncionario(f.id)" class="btn btn-danger">Excluir</button>

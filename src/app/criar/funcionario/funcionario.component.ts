@@ -18,8 +18,7 @@ export class FuncionarioComponent implements OnInit {
   }
 
   onSubmit(){
-    this.funcionarioService.criar(this.funcionario).subscribe(data=>{console.log(data)}, error => console.log(error))
-    this.goToList();
+    this.funcionarioService.criar(this.funcionario).subscribe(data=>this.goToList(), error => document.getElementById("error").style.display="flex")
   }
 
   goToList(){
