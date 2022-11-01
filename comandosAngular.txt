@@ -1,0 +1,4 @@
+npm install //instala os componentes do angular  no diretório em que o cmd estiver sendo executado
+npm install bootstrap --save //Instala o bootstrap
+
+ng serve -o //roda a aplicação angular.
