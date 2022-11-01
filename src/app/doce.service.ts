@@ -8,7 +8,7 @@ import { Doce } from './doce';
 })
 export class DoceService {
 
-  docesURL = "http://localhost:8080/doces"
+  docesURL = "https://lanchonete-funtec-api.herokuapp.com/doces"
 
   constructor(private http:HttpClient) { }
 

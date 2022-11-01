@@ -8,7 +8,7 @@ import { Funcionario } from './funcionario';
 })
 export class FuncionarioService {
 
-  funcionariosURL="http://localhost:8080/funcionarios";
+  funcionariosURL="https://lanchonete-funtec-api.herokuapp.com/funcionarios";
 
   constructor(private http:HttpClient) { }
 

@@ -4,5 +4,6 @@ export class Pedido {
     doce:string[];
     salgado:string[];
     funcionario:string;
+    cliente:string;
     valorTotal:number;
 }

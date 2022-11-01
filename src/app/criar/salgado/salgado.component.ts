@@ -18,10 +18,14 @@ export class SalgadoComponent implements OnInit {
   }
 
   onSubmit(){
-    this.salgadoService.criar(this.salgado).subscribe(data=>this.goToList(), error => {
-      console.log(error)
+    if(this.salgado.imagem==null){
       document.getElementById("error").style.display="flex";
-    }) 
+    }else{
+      this.salgadoService.criar(this.salgado).subscribe(data=>this.goToList(), error => {
+        console.log(error)
+        document.getElementById("error").style.display="flex";
+      }) 
+    }
   }
 
   goToList(){

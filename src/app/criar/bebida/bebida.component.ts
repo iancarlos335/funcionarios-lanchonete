@@ -15,13 +15,18 @@ export class BebidaComponent implements OnInit {
   constructor(private bebidaService:BebidaService, private router:Router) { }
 
   ngOnInit(): void {
+    
   }
 
   onSubmit(){
-    this.bebidaService.criar(this.bebida).subscribe(data =>this.goToList(), error =>{
-      console.log(error)
+    if(this.bebida.imagem==null){
       document.getElementById("error").style.display = "flex"
-    } )
+    }else{
+      this.bebidaService.criar(this.bebida).subscribe(data =>this.goToList(), error =>{
+        console.log(error)
+        document.getElementById("error").style.display = "flex"
+      } )
+    }
   }
 
   goToList(){

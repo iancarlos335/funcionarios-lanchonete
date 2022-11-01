@@ -5,3 +5,14 @@ button{
 #error{
     display: none;
 }
+
+.escolha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.escolha img{
+    margin: 10px;
+    width: 25%;
+}
