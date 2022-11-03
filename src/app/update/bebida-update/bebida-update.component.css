@@ -13,6 +13,12 @@ button{
     margin-top: 10px;
 }
 
+#escolhas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #error{
     display: none;
 }
@@ -21,9 +27,11 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20rem;
+    height: 25rem;
 }
 
 .escolha img{
     margin: 10px;
-    width: 25%;
+    width: 15rem;
 }
