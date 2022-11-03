@@ -30,6 +30,10 @@ export class ProdutosListaComponent implements OnInit {
     this.bebidaService.listar().subscribe(data =>{this.bebidas=data})
   }
 
+  createBebida(){
+    this.router.navigate(["bebida"])
+  }
+
   updateBebida(id:number){
     this.router.navigate(["bebidaUpdate",id])
   }
@@ -43,6 +47,10 @@ export class ProdutosListaComponent implements OnInit {
 
   private getDoces(){
     this.doceService.listar().subscribe(data =>{this.doces=data})
+  }
+
+  createDoce(){
+    this.router.navigate(["doce"])
   }
 
   updateDoce(id:number){
@@ -59,6 +67,10 @@ export class ProdutosListaComponent implements OnInit {
     this.salgadoService.listar().subscribe(data=>{this.salgados=data})
   }
 
+  createSalgado(){
+    this.router.navigate(["salgado"])
+  }
+
   updateSalgado(id:number){
     this.router.navigate(["salgadoUpdate",id])
   }
@@ -69,7 +81,4 @@ export class ProdutosListaComponent implements OnInit {
     window.location.reload();
   }
 
-  refresh(): void {
-    window.location.reload();
-}
 }

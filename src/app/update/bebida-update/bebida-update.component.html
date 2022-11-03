@@ -1,25 +1,37 @@
-<div class="col-md-6 offset-md-3">
-    <h2>Atualizar Bebida</h2>
-    <form (ngSubmit) = "onSubmit()">
-    
+<main>
+
+    <div class="col-md-6 offset-md-3">
+        <h2>Atualizar Bebida</h2>
+        <form (ngSubmit) = "onSubmit()">
+            
         <div class="form-group">
             <label>Nome do Produto</label>
             <input type="text" class="form-control" id="nomeProduto"
-                [(ngModel)] = "bebida.nomeBebida" name="nomeProduto" autocomplete="off" required>
+            [(ngModel)] = "bebida.nomeBebida" name="nomeProduto" autocomplete="off" required>
         </div>
         <div class="form-group">
             <label>Valor</label>
             <input type="text" class="form-control" id="valor"
-                [(ngModel)] = "bebida.valor" name="valo" autocomplete="off" required>
+            [(ngModel)] = "bebida.valor" name="valo" autocomplete="off" required>
         </div>
         <div class="form-group">
             <label>Descricão</label>
             <textarea type="text" class="form-control" id="descricao"
-                [(ngModel)] = "bebida.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
+            [(ngModel)] = "bebida.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
+        </div>
+        <div class="fomr-group">
+            <label>Escolha a Imagem</label>
+            <div id="imagens">
+                <div class="escolha">
+                    <img src="assets/img/lata-coca.jpeg" alt="avatar homem">
+                    <input type="radio" value="assets/img/lata-coca.jpeg" [(ngModel)] = "bebida.imagem" name="imagem" required>
+                </div>
+            </div>
         </div>
         <div class="alert alert-danger justify-content-between mt-3" role="alert" id="error">
             ERRO AO ATUALIZAR BEBIDA! <small>Dica: Utilize Ponto</small>
         </div>
-            <button type="submit" class="btn btn-success">Atualizar</button>
+        <button type="submit" class="btn btn-success">Atualizar</button>
     </form>
-    </div>
+</div>
+</main>

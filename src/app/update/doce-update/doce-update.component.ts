@@ -22,9 +22,13 @@ export class DoceUpdateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.doceService.atualizarDoce(this.id, this.doce).subscribe(data => this.goToList(),error=>{
+    if(this.doce.imagem==null){
       document.getElementById("error").style.display="flex";
-    })
+    }else{
+      this.doceService.atualizarDoce(this.id, this.doce).subscribe(data => this.goToList(),error=>{
+        document.getElementById("error").style.display="flex";
+      })
+    }
   }
 
   goToList(){
