@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Bebida } from '../bebida';
-import { BebidaService } from '../bebida.service';
-import { Doce } from '../doce';
-import { DoceService } from '../doce.service';
-import { Salgado } from '../salgado';
-import { SalgadoService } from '../salgado.service';
+import { Bebida } from '../class/bebida';
+import { BebidaService } from '../services/bebida.service';
+import { Doce } from '../class/doce';
+import { DoceService } from '../services/doce.service';
+import { Salgado } from '../class/salgado';
+import { SalgadoService } from '../services/salgado.service';
 
 @Component({
   selector: 'app-produtos-lista',

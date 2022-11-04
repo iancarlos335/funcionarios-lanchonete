@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Doce } from 'src/app/doce';
-import { DoceService } from 'src/app/doce.service';
+import { Doce } from 'src/app/class/doce';
+import { DoceService } from 'src/app/services/doce.service';
 
 @Component({
   selector: 'app-doce-update',

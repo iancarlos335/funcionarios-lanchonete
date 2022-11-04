@@ -4,11 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
 import { EntradaComponent } from './entrada/entrada.component';
-import { BebidaService } from './bebida.service';
-import { DoceService } from './doce.service';
-import { SalgadoService } from './salgado.service';
+import { SalgadoService } from './services/salgado.service';
 import { BebidaComponent } from './criar/bebida/bebida.component';
 import { DoceComponent } from './criar/doce/doce.component';
 import { SalgadoComponent } from './criar/salgado/salgado.component';
@@ -19,6 +16,9 @@ import { BebidaUpdateComponent } from './update/bebida-update/bebida-update.comp
 import { DoceUpdateComponent } from './update/doce-update/doce-update.component';
 import { SalgadoUpdateComponent } from './update/salgado-update/salgado-update.component';
 import { PedidoFuncionarioComponent } from './update/pedido-funcionario/pedido-funcionario.component';
+import { BebidaService } from './services/bebida.service';
+import { DoceService } from './services/doce.service';
+import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
 
 @NgModule({
   declarations: [

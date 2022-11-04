@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Salgado } from 'src/app/salgado';
-import { SalgadoService } from 'src/app/salgado.service';
+import { Salgado } from 'src/app/class/salgado';
+import { SalgadoService } from 'src/app/services/salgado.service';
 
 @Component({
   selector: 'app-salgado',

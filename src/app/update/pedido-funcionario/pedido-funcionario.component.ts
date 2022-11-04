@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Funcionario } from 'src/app/funcionario';
-import { FuncionarioService } from 'src/app/funcionario.service';
-import { Pedido } from 'src/app/pedido';
-import { PedidoService } from 'src/app/pedido.service';
+import { Funcionario } from 'src/app/class/funcionario';
+import { FuncionarioService } from 'src/app/services/funcionario.service';
+import { Pedido } from 'src/app/class/pedido';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'app-pedido-funcionario',

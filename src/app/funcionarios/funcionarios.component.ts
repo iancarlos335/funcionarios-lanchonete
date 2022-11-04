@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Funcionario } from '../funcionario';
-import { FuncionarioService } from '../funcionario.service';
+import { Funcionario } from '../class/funcionario';
+import { FuncionarioService } from '../services/funcionario.service';
 
 @Component({
   selector: 'app-funcionarios',
