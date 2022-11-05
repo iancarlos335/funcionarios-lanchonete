@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Salgado } from 'src/app/salgado';
-import { SalgadoService } from 'src/app/salgado.service';
+import { Salgado } from 'src/app/class/salgado';
+import { SalgadoService } from 'src/app/services/salgado.service';
 
 @Component({
   selector: 'app-salgado',
@@ -18,10 +18,14 @@ export class SalgadoComponent implements OnInit {
   }
 
   onSubmit(){
-    this.salgadoService.criar(this.salgado).subscribe(data=>this.goToList(), error => {
-      console.log(error)
+    if(this.salgado.imagem==null){
       document.getElementById("error").style.display="flex";
-    }) 
+    }else{
+      this.salgadoService.criar(this.salgado).subscribe(data=>this.goToList(), error => {
+        console.log(error)
+        document.getElementById("error").style.display="flex";
+      }) 
+    }
   }
 
   goToList(){

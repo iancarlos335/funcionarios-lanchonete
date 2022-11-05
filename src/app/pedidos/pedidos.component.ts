@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pedido } from '../pedido';
-import { PedidoService } from '../pedido.service';
+import { Pedido } from '../class/pedido';
+import { PedidoService } from '../services/pedido.service';
 
 @Component({
   selector: 'app-pedidos',

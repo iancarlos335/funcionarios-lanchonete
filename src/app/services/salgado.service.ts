@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Salgado } from './salgado';
+import { Salgado } from '../class/salgado';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SalgadoService {
 
-  salgadosURL = "http://localhost:8080/salgados"
+  salgadosURL = "https://lanchonete-funtec-api.herokuapp.com/salgados"
 
   constructor(private http:HttpClient) { }
 

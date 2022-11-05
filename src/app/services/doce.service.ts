@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Doce } from './doce';
+import { Doce } from '../class/doce';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DoceService {
 
-  docesURL = "http://localhost:8080/doces"
+  docesURL = "https://lanchonete-funtec-api.herokuapp.com/doces"
 
   constructor(private http:HttpClient) { }
 

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Bebida } from '../bebida';
-import { BebidaService } from '../bebida.service';
-import { Doce } from '../doce';
-import { DoceService } from '../doce.service';
-import { Salgado } from '../salgado';
-import { SalgadoService } from '../salgado.service';
+import { Bebida } from '../class/bebida';
+import { BebidaService } from '../services/bebida.service';
+import { Doce } from '../class/doce';
+import { DoceService } from '../services/doce.service';
+import { Salgado } from '../class/salgado';
+import { SalgadoService } from '../services/salgado.service';
 
 @Component({
   selector: 'app-produtos-lista',
@@ -30,6 +30,10 @@ export class ProdutosListaComponent implements OnInit {
     this.bebidaService.listar().subscribe(data =>{this.bebidas=data})
   }
 
+  createBebida(){
+    this.router.navigate(["bebida"])
+  }
+
   updateBebida(id:number){
     this.router.navigate(["bebidaUpdate",id])
   }
@@ -43,6 +47,10 @@ export class ProdutosListaComponent implements OnInit {
 
   private getDoces(){
     this.doceService.listar().subscribe(data =>{this.doces=data})
+  }
+
+  createDoce(){
+    this.router.navigate(["doce"])
   }
 
   updateDoce(id:number){
@@ -59,6 +67,10 @@ export class ProdutosListaComponent implements OnInit {
     this.salgadoService.listar().subscribe(data=>{this.salgados=data})
   }
 
+  createSalgado(){
+    this.router.navigate(["salgado"])
+  }
+
   updateSalgado(id:number){
     this.router.navigate(["salgadoUpdate",id])
   }
@@ -69,7 +81,4 @@ export class ProdutosListaComponent implements OnInit {
     window.location.reload();
   }
 
-  refresh(): void {
-    window.location.reload();
-}
 }

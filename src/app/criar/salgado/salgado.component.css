@@ -5,3 +5,29 @@ button{
 #error{
     display: none;
 }
+
+main{
+    position: absolute;
+    width: 100%;
+    overflow-y: scroll;
+    height: calc(100% - 125px);
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}
+
+#error{
+    display: none;
+}
+
+.escolha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.escolha img{
+    margin: 10px;
+    width: 35%;
+}

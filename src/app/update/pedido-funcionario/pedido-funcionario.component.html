@@ -5,7 +5,7 @@
         <div class="form-group">
             <label>Nome do Funcionario</label>
 
-            <select name="select" [(ngModel)]="pedido.funcionario" class="form-control">
+            <select name="select" [(ngModel)]="pedido.funcionario" class="form-select">
                 <option *ngFor="let f of funcionarios" value="{{f.nomeFuncionario}}">{{f.nomeFuncionario}}</option>
             </select>
         </div>

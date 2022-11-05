@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Doce } from 'src/app/doce';
-import { DoceService } from 'src/app/doce.service';
+import { Doce } from 'src/app/class/doce';
+import { DoceService } from 'src/app/services/doce.service';
 
 @Component({
   selector: 'app-doce-update',
@@ -22,9 +22,13 @@ export class DoceUpdateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.doceService.atualizarDoce(this.id, this.doce).subscribe(data => this.goToList(),error=>{
+    if(this.doce.imagem==null){
       document.getElementById("error").style.display="flex";
-    })
+    }else{
+      this.doceService.atualizarDoce(this.id, this.doce).subscribe(data => this.goToList(),error=>{
+        document.getElementById("error").style.display="flex";
+      })
+    }
   }
 
   goToList(){

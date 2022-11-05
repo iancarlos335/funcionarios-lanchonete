@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Doce } from 'src/app/doce';
-import { DoceService } from 'src/app/doce.service';
+import { Doce } from 'src/app/class/doce';
+import { DoceService } from 'src/app/services/doce.service';
 
 @Component({
   selector: 'app-doce',
@@ -18,10 +18,14 @@ export class DoceComponent implements OnInit {
   }
 
   onSubmit(){
-    this.doceService.criar(this.doce).subscribe(data=>this.goToList(), error => {
-      console.log(error)
+    if(this.doce.imagem==null){
       document.getElementById("error").style.display="flex";
-    })
+    }else{
+      this.doceService.criar(this.doce).subscribe(data=>this.goToList(), error => {
+        console.log(error)
+        document.getElementById("error").style.display="flex";
+      })
+    }
   }
 
   goToList(){

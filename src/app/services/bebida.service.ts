@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Bebida } from './bebida';
+import { Bebida } from '../class/bebida';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class BebidaService {
 
-  bebidasURL ='http://localhost:8080/bebidas';
+  bebidasURL ='https://lanchonete-funtec-api.herokuapp.com/bebidas';
 
   constructor(private http: HttpClient) { }
 

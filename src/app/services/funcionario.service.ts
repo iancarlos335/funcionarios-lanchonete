@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Funcionario } from './funcionario';
+import { Funcionario } from '../class/funcionario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FuncionarioService {
 
-  funcionariosURL="http://localhost:8080/funcionarios";
+  funcionariosURL="https://lanchonete-funtec-api.herokuapp.com/funcionarios";
 
   constructor(private http:HttpClient) { }
 
