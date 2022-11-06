@@ -8,7 +8,7 @@ import { Salgado } from '../class/salgado';
 })
 export class SalgadoService {
 
-  salgadosURL = "https://lanchonete-funtec-api.herokuapp.com/salgados"
+  salgadosURL = "http://localhost:8080/salgados"
 
   constructor(private http:HttpClient) { }
 

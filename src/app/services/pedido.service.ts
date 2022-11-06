@@ -8,7 +8,7 @@ import { Pedido } from '../class/pedido';
 })
 export class PedidoService {
 
-  pedidosURL="https://lanchonete-funtec-api.herokuapp.com/pedidos"
+  pedidosURL="http://localhost:8080/pedidos"
 
   constructor(private http:HttpClient) { }
 

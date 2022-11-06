@@ -9,7 +9,7 @@ import { Bebida } from '../class/bebida';
 })
 export class BebidaService {
 
-  bebidasURL ='https://lanchonete-funtec-api.herokuapp.com/bebidas';
+  bebidasURL = "http://localhost:8080/bebidas";
 
   constructor(private http: HttpClient) { }
 
