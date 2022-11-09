@@ -9,6 +9,8 @@ main{
     width: 88%;
     right: 6%;
     left: 6%;
+    height: calc(100% - 125px);
+    overflow-y: scroll;
 }
 
 main::-webkit-scrollbar{

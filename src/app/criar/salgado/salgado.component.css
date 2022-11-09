@@ -2,10 +2,6 @@ button{
     margin-top: 10px;
 }
 
-#error{
-    display: none;
-}
-
 main{
     position: absolute;
     width: 100%;
@@ -17,6 +13,13 @@ main::-webkit-scrollbar{
     display: none;
 }
 
+#escolhas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
 #error{
     display: none;
 }
@@ -25,9 +28,11 @@ main::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20rem;
+    height: 15rem;
 }
 
 .escolha img{
     margin: 10px;
-    width: 35%;
+    width: 100%;
 }

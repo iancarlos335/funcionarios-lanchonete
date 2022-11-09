@@ -41,8 +41,12 @@ export class ProdutosListaComponent implements OnInit {
   deleteBebida(id:number){
     this.bebidaService.deletarBebida(id).subscribe(data => {
       console.log(data);
+      window.location.reload();
+    }, error => {
+      console.log(error);
+      console.log("foi error");
+      window.location.reload();
     })
-    window.location.reload();
   }
 
   private getDoces(){
@@ -59,8 +63,12 @@ export class ProdutosListaComponent implements OnInit {
   deleteDoce(id:number){
     this.doceService.deletarDoce(id).subscribe(data => {
       console.log(data);
+      window.location.reload();
+    }, error => {
+      console.log(error);
+      console.log("foi error");
+      window.location.reload();
     })
-    window.location.reload();
   }
 
   private getSalgados(){
@@ -77,8 +85,12 @@ export class ProdutosListaComponent implements OnInit {
   deleteSalgado(id:number){
     this.salgadoService.deletarSalgado(id).subscribe(data => {
       console.log(data);
+      window.location.reload();
+    }, error => {
+      console.log(error);
+      console.log("foi error");
+      window.location.reload();
     })
-    window.location.reload();
   }
 
 }
