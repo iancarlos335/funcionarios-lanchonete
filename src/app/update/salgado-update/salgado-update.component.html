@@ -1,34 +1,45 @@
-<div class="col-md-6 offset-md-3">
-    <h2>Atualizar Salgado</h2>
-    <form (ngSubmit) = "onSubmit()">
-    
-        <div class="form-group">
-            <label>Nome do Produto</label>
-            <input type="text" class="form-control" id="nomeProduto"
+<main>
+
+    <div class="col-md-6 offset-md-3">
+        <h2>Atualizar Salgado</h2>
+        <form (ngSubmit) = "onSubmit()">
+            
+            <div class="form-group">
+                <label>Nome do Produto</label>
+                <input type="text" class="form-control" id="nomeProduto"
                 [(ngModel)] = "salgado.nomeSalgado" name="nomeProduto" autocomplete="off" required>
-        </div>
-        <div class="form-group">
-            <label>Valor</label>
-            <input type="text" class="form-control" id="valor"
+            </div>
+            <div class="form-group">
+                <label>Valor</label>
+                <input type="text" class="form-control" id="valor"
                 [(ngModel)] = "salgado.valor" name="valo" autocomplete="off" required>
-        </div>
+            </div>
         <div class="form-group">
             <label>Descricão</label>
             <textarea type="text" class="form-control" id="descricao"
-                [(ngModel)] = "salgado.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
+            [(ngModel)] = "salgado.descricao" name="descricao" style="resize:none" maxlength="255" rows="5" required></textarea>
         </div>
         <div class="fomr-group">
             <label>Escolha a Imagem</label>
-            <div id="imagens">
+            <div id="escolhas">
                 <div class="escolha">
-                    <img src="assets/img/lanche.jpg" alt="avatar homem">
-                    <input type="radio" class="form-check-input" value="assets/img/lanche.jpg" [(ngModel)] = "salgado.imagem" name="imagem" required>
+                    <img src="assets/img/hamburguer.png" alt="hamburguer">
+                    <input type="radio" class="form-check-input" value="assets/img/hamburguer.png" [(ngModel)] = "salgado.imagem" name="imagem" required>
+                </div>
+                <div class="escolha">
+                    <img src="assets/img/triplo hamburguer.png" alt="hamburguer">
+                    <input type="radio" class="form-check-input" value="assets/img/triplo hamburguer.png" [(ngModel)] = "salgado.imagem" name="imagem" required>
+                </div>
+                <div class="escolha">
+                    <img src="assets/img/xsaladaegg.png" alt="hamburguer">
+                    <input type="radio" class="form-check-input" value="assets/img/xsaladaegg.png" [(ngModel)] = "salgado.imagem" name="imagem" required>
                 </div>
             </div>
         </div>
         <div class="alert alert-danger justify-content-between mt-3" role="alert" id="error">
             ERRO AO ATUALIZAR SALGADO! <small>Dica: Utilize Ponto</small>
         </div>
-            <button type="submit" class="btn btn-success">Atualizar</button>
+        <button type="submit" class="btn btn-success">Atualizar</button>
     </form>
-    </div>
+</div>
+</main>
