@@ -17,6 +17,7 @@ button{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 #error{
@@ -28,10 +29,10 @@ button{
     flex-direction: column;
     align-items: center;
     width: 20rem;
-    height: 25rem;
+    height: 15rem;
 }
 
 .escolha img{
     margin: 10px;
-    width: 15rem;
+    width: 100%;
 }

@@ -25,8 +25,10 @@ export class FuncionariosComponent implements OnInit {
   deleteFuncionario(id:number){
     this.funcionarioService.deletar(id).subscribe(data => {
       console.log(data);
+      window.location.reload();
+    },error=>{
+      window.location.reload();
     });
-    window.location.reload();
   }
 
 
