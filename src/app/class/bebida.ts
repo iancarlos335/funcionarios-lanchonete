@@ -1,6 +1,6 @@
 export class Bebida {
         id:number;
-        nomeBebida:string;
+        nome:string;
         descricao:string;
         valor:number;
         imagem:string;

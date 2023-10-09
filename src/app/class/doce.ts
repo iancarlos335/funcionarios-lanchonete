@@ -1,6 +1,6 @@
 export class Doce {
     id:number;
-    nomeDoce:string;
+    nome:string;
     descricao:string;
     valor:number;
     imagem:string;

@@ -1,6 +1,6 @@
 export class Salgado {
     id:number;
-    nomeSalgado:string;
+    nome:string;
     descricao:string;
     valor:number;
     imagem:string;
